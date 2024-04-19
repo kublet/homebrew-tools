@@ -5,20 +5,20 @@
 class Krate < Formula
   desc ""
   homepage "https://github.com/kublet/homebrew-tools"
-  version "1.0.3"
+  version "0.0.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kublet/krate/releases/download/v1.0.3/krate_Darwin_x86_64.tar.gz"
-      sha256 "64ec9741fc98817ada5e2b63e5e8540cffa08cda664cece2e542f9a942b1489e"
+      url "https://github.com/kublet/krate/releases/download/v0.0.1/krate_Darwin_x86_64.tar.gz"
+      sha256 "9a2d2997940145aff0b4fdb25e6076e8cf477b22aab49d8e99ccfe56d269e667"
 
       def install
         bin.install "krate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kublet/krate/releases/download/v1.0.3/krate_Darwin_arm64.tar.gz"
-      sha256 "d6f5797ed94e753c80dd34af89e2dcf9f3d6b10ab5baccb4fb47cc78e9844db6"
+      url "https://github.com/kublet/krate/releases/download/v0.0.1/krate_Darwin_arm64.tar.gz"
+      sha256 "b7cc9c6ab87c3b78e81fc05d727ada3da7671d72dd9f997dfde9c4ea17ee770b"
 
       def install
         bin.install "krate"
@@ -28,16 +28,16 @@ class Krate < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kublet/krate/releases/download/v1.0.3/krate_Linux_x86_64.tar.gz"
-      sha256 "71912269de9ede1e83f2743790a0ead834ba48471d6bf7eaa291c8dd3415a10b"
+      url "https://github.com/kublet/krate/releases/download/v0.0.1/krate_Linux_x86_64.tar.gz"
+      sha256 "1e0642e23d584a45888ff767bc0af5ec154a8c91cb8b22f2950893a556e8c460"
 
       def install
         bin.install "krate"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kublet/krate/releases/download/v1.0.3/krate_Linux_arm64.tar.gz"
-      sha256 "6bacf248176a5921bc755e248f9d7185908d9dfba74366245a8fc86e5a4e7ce5"
+      url "https://github.com/kublet/krate/releases/download/v0.0.1/krate_Linux_arm64.tar.gz"
+      sha256 "d1f4ff6c701b100e901cb79b69dd2bfba1f90cce8347a7eb57e9124d77d4c88d"
 
       def install
         bin.install "krate"
