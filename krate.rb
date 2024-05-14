@@ -5,20 +5,20 @@
 class Krate < Formula
   desc ""
   homepage "https://github.com/kublet/homebrew-tools"
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kublet/krate/releases/download/v0.0.5/krate_Darwin_x86_64.tar.gz"
-      sha256 "ded397ae4cc3c91940a741cb043f626e93065be2ac2e2a4e1718de75f139162a"
+    on_intel do
+      url "https://github.com/kublet/krate/releases/download/v0.0.6/krate_Darwin_x86_64.tar.gz"
+      sha256 "d6bba562418f8c77b2b7c7200acc211017717435af19c0ca9d6c8313c08bc0aa"
 
       def install
         bin.install "krate"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kublet/krate/releases/download/v0.0.5/krate_Darwin_arm64.tar.gz"
-      sha256 "2a8626c2860e525c3c8bc6a04e4b7dfa97abecd17b3aaed06a68c03a5f18bf4c"
+    on_arm do
+      url "https://github.com/kublet/krate/releases/download/v0.0.6/krate_Darwin_arm64.tar.gz"
+      sha256 "c1d0f1f7f458282475928bcadf6967127e51e227de7084aacf9d751976a82134"
 
       def install
         bin.install "krate"
@@ -27,20 +27,24 @@ class Krate < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kublet/krate/releases/download/v0.0.5/krate_Linux_x86_64.tar.gz"
-      sha256 "2e8bc91fbcd0f23b2caf165c1ab1bccdd53c3ef0af0880c5a68e1d2661eae4d4"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/kublet/krate/releases/download/v0.0.6/krate_Linux_x86_64.tar.gz"
+        sha256 "6622d0cabb26a43638375bcd955bc1191f9962851b470d74498ac9199e0891f9"
 
-      def install
-        bin.install "krate"
+        def install
+          bin.install "krate"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kublet/krate/releases/download/v0.0.5/krate_Linux_arm64.tar.gz"
-      sha256 "c944e4a47f68c56aab2998ca63e093ef535d3d15233d89621b36f53cb77c81a8"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/kublet/krate/releases/download/v0.0.6/krate_Linux_arm64.tar.gz"
+        sha256 "a1231f5aaf00883c7448eaa3dc868b6cacc182c542d20756b00b14e78fca283b"
 
-      def install
-        bin.install "krate"
+        def install
+          bin.install "krate"
+        end
       end
     end
   end
