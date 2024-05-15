@@ -5,20 +5,20 @@
 class Krate < Formula
   desc ""
   homepage "https://github.com/kublet/homebrew-tools"
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
     on_intel do
-      url "https://github.com/kublet/krate/releases/download/v0.0.6/krate_Darwin_x86_64.tar.gz"
-      sha256 "d6bba562418f8c77b2b7c7200acc211017717435af19c0ca9d6c8313c08bc0aa"
+      url "https://github.com/kublet/krate/releases/download/v0.0.7/krate_Darwin_x86_64.tar.gz"
+      sha256 "aafe58a1dfa27ea9c34b54013102b7d91ab7e4f7faae9144c669c4b4971a0685"
 
       def install
         bin.install "krate"
       end
     end
     on_arm do
-      url "https://github.com/kublet/krate/releases/download/v0.0.6/krate_Darwin_arm64.tar.gz"
-      sha256 "c1d0f1f7f458282475928bcadf6967127e51e227de7084aacf9d751976a82134"
+      url "https://github.com/kublet/krate/releases/download/v0.0.7/krate_Darwin_arm64.tar.gz"
+      sha256 "bf74d318e627a6fd8b141e1a1321d608a7dae6856480105ddd8197e3dc718b08"
 
       def install
         bin.install "krate"
@@ -29,8 +29,8 @@ class Krate < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kublet/krate/releases/download/v0.0.6/krate_Linux_x86_64.tar.gz"
-        sha256 "6622d0cabb26a43638375bcd955bc1191f9962851b470d74498ac9199e0891f9"
+        url "https://github.com/kublet/krate/releases/download/v0.0.7/krate_Linux_x86_64.tar.gz"
+        sha256 "fb856b45c597bb642988eccaa6c0bc9bca4a39e2bfab98b239685d8a96edd92d"
 
         def install
           bin.install "krate"
@@ -39,8 +39,8 @@ class Krate < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kublet/krate/releases/download/v0.0.6/krate_Linux_arm64.tar.gz"
-        sha256 "a1231f5aaf00883c7448eaa3dc868b6cacc182c542d20756b00b14e78fca283b"
+        url "https://github.com/kublet/krate/releases/download/v0.0.7/krate_Linux_arm64.tar.gz"
+        sha256 "bf40d96e2ec0fff87b4b156c572711cd990c4a5db75af6577aa1cec15bcab3fe"
 
         def install
           bin.install "krate"
