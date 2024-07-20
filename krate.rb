@@ -5,20 +5,20 @@
 class Krate < Formula
   desc ""
   homepage "https://github.com/kublet/homebrew-tools"
-  version "0.0.8"
+  version "0.0.11"
 
   on_macos do
     on_intel do
-      url "https://github.com/kublet/krate/releases/download/v0.0.8/krate_Darwin_x86_64.tar.gz"
-      sha256 "37ee5adf2cae92299191240cc94ddff2fcb7a930f1b649f0908aa35fe67d2c8b"
+      url "https://github.com/kublet/krate/releases/download/v0.0.11/krate_Darwin_x86_64.tar.gz"
+      sha256 "ad6406e20c08408b98a59488741cfc008236f162b8f4c7f002d93442624983b0"
 
       def install
         bin.install "krate"
       end
     end
     on_arm do
-      url "https://github.com/kublet/krate/releases/download/v0.0.8/krate_Darwin_arm64.tar.gz"
-      sha256 "b458b726d5f5ef117982287cac408637909927ef85fb01fbde0edc222b75e47d"
+      url "https://github.com/kublet/krate/releases/download/v0.0.11/krate_Darwin_arm64.tar.gz"
+      sha256 "3afebc3020991e92c48888ed6150ab854490bc17ce1151b743d6e9b6900221a6"
 
       def install
         bin.install "krate"
@@ -29,8 +29,8 @@ class Krate < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kublet/krate/releases/download/v0.0.8/krate_Linux_x86_64.tar.gz"
-        sha256 "61923b938eae579dcafec3ddf7aa6273e22fc515c736ffec4a3f3b800986de90"
+        url "https://github.com/kublet/krate/releases/download/v0.0.11/krate_Linux_x86_64.tar.gz"
+        sha256 "3bf051c0680ffc51933e1b27fc36b413fbf90678dc156003c9c5b41ee64c7b86"
 
         def install
           bin.install "krate"
@@ -39,8 +39,8 @@ class Krate < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kublet/krate/releases/download/v0.0.8/krate_Linux_arm64.tar.gz"
-        sha256 "ea85566c6f573d314b5d1ca58404ed1fee58bf40dd769940cff7ef7f269d3c56"
+        url "https://github.com/kublet/krate/releases/download/v0.0.11/krate_Linux_arm64.tar.gz"
+        sha256 "17e21dec5ce31ef6d5cbec249b28b452fa7709cdb7b8f4a29b3b52651b175c9b"
 
         def install
           bin.install "krate"
